@@ -4,6 +4,9 @@
 #include <math.h>
 #include "rabinFunctions.h"
 
+static void getParameters(int* t, unsigned long* c, unsigned long n);
+static unsigned long modExp(unsigned long m, unsigned long e, unsigned long n);
+
 Boolean millerRabinTest(unsigned long n, int s){
   int i,j, t=0, aux;
   unsigned long c = 0, a = 0, r0, r1;
