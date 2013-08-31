@@ -11,7 +11,7 @@ Boolean millerRabinTest(unsigned long n, int s){
   int i,j, t=0, aux;
   unsigned long c = 0, a = 0, r0, r1;
 
-  if(n % 2 == 0 && n != 2)
+  if((n % 2 == 0 && n != 2) || n == 1 )
     return FALSE;
   if(n == 2) return TRUE;
   
