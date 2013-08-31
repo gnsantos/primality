@@ -1,77 +1,117 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <time.h>
-#include <math.h>
+#include "rabinFunctions.h"
 
-typedef enum{FALSE, TRUE}Boolean;
+void help();
 
-Boolean millerRabinTest(unsigned long, int);
-void getParameters(int*, unsigned long*, unsigned long);
-unsigned long modExp(unsigned long, unsigned long, unsigned long);
+int main(int argc, char* argv[]){
+  char c, *outputName, *inputName;
+  FILE* input;
+  FILE* output;
+  Boolean runtime = TRUE, single = FALSE, result;
+  unsigned long p = 2;
+  int runs = 30, primes = 0, composites = 0;
+  clock_t start, end;
+  double elapsed = 0;
 
-int main(int argc, char** argv){
-
-  unsigned long p = atoi(argv[1]);
+  if(argc < 2){
+    help();
+  }
   
-  if( millerRabinTest(p, 30) ) printf("Primo.\n");
-  else printf("Composto.\n");
+  while( (c = getopt(argc, argv, "t:f:o:r:y")) != -1){
+    switch(c){
+    case 'f':
+      inputName = optarg;
+      break;
+    case 't':
+      p = atoi(optarg);
+      single = TRUE;
+      break;
+    case 'o':
+      outputName = optarg;
+      break;
+    case 'y':
+      runtime = FALSE;
+      break;
+    case 'r':
+      runs = atoi(optarg);
+      break;
+    }
+  }
 
-  /*long a = atoi(argv[1]), c = atoi(argv[2]), n = atoi(argv[3]);
-    printf("res = %d\n", modExp(a,c,n));*/
+  output = fopen(outputName, "w");
+  input = fopen(inputName, "r");
+
+  if(!single){
+    if(input == NULL){
+      puts("Unable to open file for reading.");
+      help();
+    }
+    while(fscanf(input, "%lud", &p) != EOF){\
+
+      start = clock();
+
+      result = millerRabinTest(p, runs);
+
+      end = clock();
+
+      elapsed += (double)(end - start)/CLOCKS_PER_SEC;
+
+      if(result){
+	if(!output) fprintf(stdout, "%ld is a prime.\n", p);
+	else fprintf(output, "%ld is a prime.\n", p);
+	primes++;
+      }
+      else{
+	if(!output) fprintf(stdout, "%ld is composite.\n", p);
+	else fprintf(output, "%ld is composite.\n", p);
+	composites++;
+      }
+    }
+    
+    fprintf(stdout, "There were %d composites and %d primes.\n", composites, primes);
+    if(runtime) fprintf(stdout, "TIME: %f (reading and printing times not included)\n", elapsed);
+
+  }
+
+  else{
+    start = clock();
+    result = millerRabinTest(p, runs);
+
+    end = clock();
+
+    elapsed = (double)(end - start)/CLOCKS_PER_SEC;
+
+    if(result){
+      if(!output) fprintf(stdout, "%ld is a prime.\n", p);
+      else fprintf(output, "%ld is a prime.\n", p);
+    }
+    else{
+      if(!output) fprintf(stdout, "%ld is composite.\n", p);
+      else fprintf(output, "%ld is composite.\n", p);
+    }
+
+    if(runtime) fprintf(stdout, "TIME: %f (reading and printing times not included)\n", elapsed);
+
+  }
+
+  fclose(input);
+  fclose(output);
 
   return 0;
 }
 
-Boolean millerRabinTest(unsigned long n, int s){
-  int i,j, t=0, aux;
-  unsigned long c = 0, a = 0, r0, r1;
-
-  if(n % 2 == 0 && n != 2)
-    return FALSE;
-  if(n == 2) return TRUE;
-  
-  getParameters(&t, &c, n);  
-  
-  srand(time(NULL));
-  for(i = 0; i < s; i++){
-    a = rand()%(n-4) + 2;
-    r0 = modExp(a, c, n);   
-    r1 = (r0 * r0)%n;
-    for(j= 0; j < t; j++){
-      if(r1 == 1 && r0 != 1 && r0 != n-1)
-	return FALSE;
-      aux = r1;
-      r1 = (r1*r1)%n;
-      r0 = aux;
-    }
-    if(r1 != 1) return FALSE;
-  }
-  return TRUE;
+void help(){
+  fprintf(stdout, "Use -t<number> to test the primality of a single number.\n"
+	 "Use -f<input file name> to read the numbers from a file. The output will the STDOUT.\n"
+	 "To redirect outuput, use -o<output file name>.\n"
+	 "The time consumed is sent to STDOUT. To supress, use -y.\n"
+	 "The standard number of runs is 30. Change it using -r<nRuns>.\n"
+	 );
+  exit(-1);
 }
-
-void getParameters(int* t, unsigned long* c, unsigned long n){
-  int x = n-1, aux = 0;
-  while(x%2 == 0){
-    x/=2;
-    aux++;
-  }
-  *t = aux;
-  *c = (n-1)/(pow(2,aux));
-}
-
-unsigned long modExp(unsigned long m, unsigned long e, unsigned long n){
-  unsigned long temp = 1;
-  int j;
-  int b;
-  for(j = log2(e); j >= 0; j--){
-    temp = (temp*temp)%n;
-    b = (e & (1 << j)) >> j;
-    if(b == 1)
-      temp = (temp*m)%n;
-  }
-  return temp;
-}
-    
     
   
   
