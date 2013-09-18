@@ -1,0 +1,5 @@
+#!/bin/bash/
+
+set terminal png enhanced
+set outuput $2
+plot "./1$"

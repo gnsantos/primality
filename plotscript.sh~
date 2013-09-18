@@ -1,0 +1,6 @@
+#!usr/bin/bash
+
+gnuplot
+set terminal png enhanced
+set outuput $2
+plot "./1$"

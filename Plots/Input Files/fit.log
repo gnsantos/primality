@@ -1,0 +1,509 @@
+
+
+*******************************************************************************
+Wed Sep 18 16:59:22 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:1
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Wed Sep 18 16:59:35 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:1
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 3.32413e+11       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 8.27116
+
+initial set of free parameter values
+
+a1              = 1
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 5.60605e+10
+rel. change during last iteration : -4.92954e-08
+
+degrees of freedom    (FIT_NDF)                        : 9998
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2367.95
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.60717e+06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a1              = 636.605          +/- 2.863        (0.4497%)
+
+
+correlation matrix of the fit parameters:
+
+               a1     
+a1              1.000 
+
+
+*******************************************************************************
+Wed Sep 18 17:01:24 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:1
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f1(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 5.60605e+10       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 8.27116
+
+initial set of free parameter values
+
+a1              = 636.605
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 5.60605e+10
+rel. change during last iteration : -9.52645e-16
+
+degrees of freedom    (FIT_NDF)                        : 9998
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2367.95
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.60717e+06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a1              = 636.605          +/- 2.863        (0.4497%)
+
+
+correlation matrix of the fit parameters:
+
+               a1     
+a1              1.000 
+
+
+*******************************************************************************
+Wed Sep 18 17:04:21 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:2
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 7.07804e+10       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 5773.36
+
+initial set of free parameter values
+
+b               = 1
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 1.9549e+10
+rel. change during last iteration : -2.62066e-08
+
+degrees of freedom    (FIT_NDF)                        : 9998
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1398.32
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.95529e+06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.607932         +/- 0.002422     (0.3984%)
+
+
+correlation matrix of the fit parameters:
+
+               b      
+b               1.000 
+
+
+*******************************************************************************
+Wed Sep 18 17:04:39 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:2
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1.9549e+10        delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 5773.36
+
+initial set of free parameter values
+
+b               = 0.607932
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.9549e+10
+rel. change during last iteration : -5.85405e-16
+
+degrees of freedom    (FIT_NDF)                        : 9998
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1398.32
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.95529e+06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.607932         +/- 0.002422     (0.3984%)
+
+
+correlation matrix of the fit parameters:
+
+               b      
+b               1.000 
+
+
+*******************************************************************************
+Wed Sep 18 17:07:50 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:1
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 5.12314e+10       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 5773.36
+
+initial set of free parameter values
+
+b               = 0.607932
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0
+abs. change during last iteration : -5.12414e-10
+
+
+Hmmmm.... Sum of squared residuals is zero. Can't compute errors.
+
+Final set of parameters 
+======================= 
+
+b               = 1              
+
+
+*******************************************************************************
+Wed Sep 18 17:08:19 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:3
+        format = x:z
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Sep 18 17:08:25 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:2
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f2(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 7.07804e+10       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 5773.36
+
+initial set of free parameter values
+
+b               = 1
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 1.9549e+10
+rel. change during last iteration : -2.62066e-08
+
+degrees of freedom    (FIT_NDF)                        : 9998
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1398.32
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.95529e+06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.607932         +/- 0.002422     (0.3984%)
+
+
+correlation matrix of the fit parameters:
+
+               b      
+b               1.000 
+
+
+*******************************************************************************
+Wed Sep 18 17:09:54 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:2
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+fitted parameters initialized with current variable values
+
+BREAK:          no parameter specified
+
+
+
+*******************************************************************************
+Wed Sep 18 17:10:02 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:2
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.01848e+13       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 34886.1
+
+initial set of free parameter values
+
+a               = 1
+b               = 0.607932
+
+After 45 iterations the fit converged.
+final sum of squares of residuals : 1.966e+10
+rel. change during last iteration : -9.98897e-06
+
+degrees of freedom    (FIT_NDF)                        : 9997
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1402.35
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.96659e+06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.0547278        +/- 0.007287     (13.32%)
+b               = 9.21904          +/- 13.64        (147.9%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -1.000  1.000 
+
+
+*******************************************************************************
+Wed Sep 18 17:10:55 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:2
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f3(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1.966e+10         delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 45327.6
+
+initial set of free parameter values
+
+a               = 0.0547278
+b               = 9.21904
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.966e+10
+rel. change during last iteration : -5.83117e-08
+
+degrees of freedom    (FIT_NDF)                        : 9997
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1402.35
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.96659e+06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.0547278        +/- 0.007287     (13.32%)
+b               = 9.21957          +/- 13.64        (147.9%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -1.000  1.000 
+
+
+*******************************************************************************
+Wed Sep 18 17:13:10 2013
+
+
+FIT:    data read from "./phiG.txt"
+        format = z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+
+
+*******************************************************************************
+Wed Sep 18 17:13:23 2013
+
+
+FIT:    data read from "./phiG.txt"
+        format = z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+
+
+*******************************************************************************
+Wed Sep 18 17:13:30 2013
+
+
+FIT:    data read from "./phiG.txt"
+        format = z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+
+
+*******************************************************************************
+Wed Sep 18 17:13:53 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:1
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.96931e+11       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 4082.38
+
+initial set of free parameter values
+
+a               = 0.0547278
+b               = 9.21957
+
+After 15 iterations the fit converged.
+final sum of squares of residuals : 1.29455e-25
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 9997
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.59853e-15
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.29494e-29
+
+BREAK:          Singular matrix in Invert_RtR
+
+
+
+*******************************************************************************
+Wed Sep 18 18:27:31 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:2
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: h(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1.42724e+11       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0
+
+initial set of free parameter values
+
+a               = 1
+b               = -1.50884e-14
+BREAK:          Singular matrix in Givens()
+
+
+
+*******************************************************************************
+Wed Sep 18 18:27:45 2013
+
+
+FIT:    data read from "./phiG.txt" using 1:1
+        format = x:z
+        #datapoints = 9999
+        residuals are weighted equally (unit weight)
+
+function used for fitting: h(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 3.33283e+11       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0
+
+initial set of free parameter values
+
+a               = 1
+b               = -1.51035e-14
+BREAK:          Singular matrix in Givens()
+

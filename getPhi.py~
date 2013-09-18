@@ -1,0 +1,16 @@
+import sys, getopt
+
+def gdc(a,b):
+    if(a > b):
+        aux = b
+        b = a
+        a = aux
+    if b%a == 0:
+        return a
+    return gdc(b%a, a)
+
+def phi(n):
+    return len([i for i in range(1,n) if gdc(i,n) == 1]);
+
+for i in range(1, n):
+    print i,phi(i)
