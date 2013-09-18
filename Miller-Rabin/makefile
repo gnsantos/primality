@@ -1,11 +1,11 @@
 mrtest: rabin.o rabinFunctions.o
-	gcc -Wall -ansi -pedantic -O3 rabin.o rabinFunctions.o -o mrtest
+	gcc -Wall -pedantic -g rabin.o rabinFunctions.o -o mrtest -lm
 
 rabin.o: rabin.c rabinFunctions.h
-	gcc -Wall -ansi -pedantic -O3 -c rabin.c
+	gcc -Wall -pedantic -g -c rabin.c -lm
 
 rabinFunctions.o: rabinFunctions.c rabinFunctions.h
-	gcc -Wall -ansi -pedantic -O3 -c rabinFunctions.c
+	gcc -Wall -pedantic -g -c rabinFunctions.c -lm
 
 clean:
 	rm -f mrtest *.o
